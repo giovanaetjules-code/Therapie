@@ -116,7 +116,7 @@ function initScene() {
   loader.load('salle.glb', (gltf) => {
     scene.remove(roomGroup); // on retire le placeholder
     const room = gltf.scene;
-    room.scale.set(1, 1, 1); // ← change ici si la salle est trop grande/petite, ex: 0.1 pour diviser par 10
+    room.scale.set(5, 1, 1); // ← change ici si la salle est trop grande/petite, ex: 0.1 pour diviser par 10
     room.position.set(0, 0, 0); // ajuste si ta salle n'est pas centrée à l'origine dans Blender
     scene.add(room);
     roomModel = room;
