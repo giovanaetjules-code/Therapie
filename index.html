@@ -128,7 +128,7 @@ function initScene() {
     scene.remove(character); // on retire le placeholder
     character = gltf.scene;
     character.scale.set(1, 1, 1); // ← ajuste ici si besoin
-    character.position.set(0, 0, -2.5); // ajuste la position dans la salle
+    character.position.set(0, 0, 0); // ajuste la position dans la salle
     scene.add(character);
   }, undefined, (err) => {
     console.warn('personnage.glb introuvable, placeholder conservé', err);
@@ -141,7 +141,7 @@ function initScene() {
   scene.add(point);
 
   scene.add(camera);
-  camera.position.set(0, 1.6, 0); // hauteur des yeux
+  camera.position.set(0, 1.6, 3); // hauteur des yeux
 
   window.addEventListener('resize', onResize);
 }
